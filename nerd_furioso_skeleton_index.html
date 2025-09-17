@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nerd Furioso — Notícias Xbox, Filmes e Quadrinhos</title>
+  <meta name="description" content="Nerd Furioso — Portal de notícias, Game Pass, Microsoft Rewards, filmes e quadrinhos." />
+  <style>
+    :root{
+      --xbox-green:#107C10;
+      --dark:#0b0b0b;
+      --muted:#e6e6e6;
+      --card-bg:#111214;
+      --accent:#2b2b2b;
+      --max-width:1100px;
+      --radius:12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#070708;color:var(--muted);line-height:1.45}
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{background:linear-gradient(135deg,var(--xbox-green),#3aa22f);width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#051006;font-size:20px}
+    .alt-logo{width:56px;height:56px;border-radius:50%;background:#fff url('https://via.placeholder.com/56x56?text=NF') center/cover no-repeat;}
+    h1.site-title{font-size:20px;margin:0;color:var(--muted)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
+
+    .news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0 6px 0;color:#fff;font-size:16px}
+    .card p{margin:0;color:rgba(255,255,255,0.75);font-size:13px}
+    .meta{font-size:12px;color:rgba(255,255,255,0.5);margin-top:8px}
+
+    aside{background:var(--card-bg);padding:12px;border-radius:var(--radius);height:fit-content}
+    .sidebar-section{margin-bottom:14px}
+    .small-list{display:flex;flex-direction:column;gap:8px}
+    .small-list a{color:var(--muted);text-decoration:none}
+
+    .rewards{background:linear-gradient(180deg, rgba(16,124,16,0.06), rgba(0,0,0,0.2));padding:14px;border-radius:var(--radius);border:1px solid rgba(16,124,16,0.06)}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left;font-size:13px}
+
+    footer{padding:28px 0;text-align:center;color:rgba(255,255,255,0.5)}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      nav a{display:none}
+    }
+
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--xbox-green);color:#011;font-weight:700;text-decoration:none}
+    .muted{color:rgba(255,255,255,0.6);font-size:13px}
+    .kicker{font-size:12px;color:var(--xbox-green);font-weight:700}
+
+    .feedback-box{margin-top:20px;padding:16px;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius);background:rgba(255,255,255,0.03)}
+    .feedback-box h4{margin:0 0 8px;color:#fff}
+    .feedback-box textarea{width:100%;min-height:80px;padding:8px;border-radius:6px;border:none;margin-bottom:8px}
+    .feedback-box button{background:var(--xbox-green);color:#fff;padding:8px 12px;border:none;border-radius:6px;font-weight:700;cursor:pointer}
+    .rating{display:flex;gap:6px;margin-bottom:10px}
+    .rating span{cursor:pointer;font-size:20px}
+
+    .comment-section{margin-top:20px}
+    .comment-section h4{color:#fff;margin-bottom:8px}
+    .comment{background:rgba(255,255,255,0.05);padding:8px;border-radius:6px;margin-bottom:6px;font-size:13px}
+    .comment strong{color:#fff}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">NF</div>
+        <div class="alt-logo"></div>
+        <div>
+          <h1 class="site-title">Nerd Furioso</h1>
+          <div class="muted">Portal de notícias Xbox • Game Pass • Rewards • Filmes • Quadrinhos</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#noticias">Notícias</a>
+        <a href="#filmes">Filmes</a>
+        <a href="#quadrinhos">Quadrinhos</a>
+        <a href="#gamepass">Game Pass</a>
+        <a href="#rewards">Rewards</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="kicker">Últimas</div>
+            <h2 style="margin:6px 0 12px;color:#fff">Notícias do Xbox</h2>
+          </div>
+        </div>
+
+        <div id="noticias" class="news-grid">
+          <article class="card">
+            <img src="https://via.placeholder.com/600x300?text=Lancamento" alt="Lançamento" />
+            <h3>Microsoft anuncia novo exclusivo para Xbox</h3>
+            <p>Resumo rápido: estúdio X confirmou data e plataformas.</p>
+            <div class="meta">Por Nerd Furioso • 17 set 2025</div>
+          </article>
+        </div>
+
+        <!-- Caixa de feedback para notícia -->
+        <div class="feedback-box">
+          <h4>Deixe sua opinião sobre esta notícia</h4>
+          <div class="rating">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          </div>
+          <textarea placeholder="Escreva seu comentário..."></textarea>
+          <button id="sendFeedback">Enviar Feedback</button>
+        </div>
+
+        <!-- Lista de comentários -->
+        <div class="comment-section">
+          <h4>Comentários</h4>
+          <div id="comments">
+            <div class="comment"><strong>João:</strong> Muito bom saber dessa novidade!</div>
+            <div class="comment"><strong>Ana:</strong> Ansiosa para jogar!</div>
+          </div>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="sidebar-section">
+          <h4 style="margin:0 0 8px 0;color:#fff">Destaques</h4>
+          <div class="small-list">
+            <a href="#">Trailer novo de Estúdio X</a>
+            <a href="#">Atualização Game Pass</a>
+            <a href="#">Evento Xbox Showcase</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Sessão de Filmes -->
+    <section id="filmes" style="margin-top:28px">
+      <h2 style="color:#fff">Filmes</h2>
+      <div class="news-grid">
+        <article class="card">
+          <img src="https://via.placeholder.com/600x300?text=Filme" alt="Filme" />
+          <h3>Estreia do novo filme inspirado em games</h3>
+          <p>Resumo: adaptação chega aos cinemas em breve.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sessão de Quadrinhos -->
+    <section id="quadrinhos" style="margin-top:28px">
+      <h2 style="color:#fff">Quadrinhos</h2>
+      <div class="news-grid">
+        <article class="card">
+          <img src="https://via.placeholder.com/600x300?text=Quadrinho" alt="Quadrinho" />
+          <h3>Novo quadrinho baseado em universo gamer</h3>
+          <p>Resumo: HQ traz história inédita ligada a franquia famosa.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Rewards section -->
+    <section id="rewards" style="margin-top:28px">
+      <h2 style="margin:6px 0;color:#fff">Microsoft Rewards — Guia Rápido</h2>
+      <div class="card">
+        <p class="muted">Complete missões e troque pontos por benefícios.</p>
+        <table>
+          <thead><tr><th>Missão</th><th>Pontos</th><th>Dificuldade</th></tr></thead>
+          <tbody>
+            <tr><td>Pesquisar com Bing (10x)</td><td>50</td><td>Fácil</td></tr>
+            <tr><td>Tarefa Game Pass</td><td>30</td><td>Média</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer style="margin-top:28px">
+      <div>Nerd Furioso • Portal de Xbox, Filmes e Quadrinhos</div>
+      <div style="font-size:12px;margin-top:6px;color:rgba(255,255,255,0.5)">Feito por você — personalize textos e imagens.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('.card img').forEach(img=>{
+      img.onerror = ()=> img.src = 'https://via.placeholder.com/600x300?text=Imagem+indisponivel'
+    });
+
+    document.querySelectorAll('.rating span').forEach((star,i)=>{
+      star.addEventListener('click',()=>{
+        alert(`Você avaliou esta notícia com ${i+1} estrelas!`);
+      });
+    });
+
+    document.getElementById('sendFeedback').addEventListener('click', ()=>{
+      const textarea = document.querySelector('.feedback-box textarea');
+      const commentText = textarea.value.trim();
+      if(commentText){
+        const newComment = document.createElement('div');
+        newComment.className = 'comment';
+        newComment.innerHTML = `<strong>Você:</strong> ${commentText}`;
+        document.getElementById('comments').appendChild(newComment);
+        textarea.value = '';
+      } else {
+        alert('Escreva um comentário antes de enviar.');
+      }
+    });
+  </script>
+</body>
+</html>
